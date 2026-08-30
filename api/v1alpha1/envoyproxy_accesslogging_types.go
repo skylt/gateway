@@ -95,6 +95,10 @@ type ProxyAccessLogFormat struct {
 	// It's required when the format type is "JSON".
 	// +optional
 	JSON map[string]string `json:"json,omitempty"`
+	// OmitEmpty defines whether empty logs should be omitted from the final log.
+	// This sets Envoy [omit_empty_values](https://www.envoyproxy.io/docs/envoy/latest/api-v3/config/core/v3/substitution_format_string.proto#envoy-v3-api-field-config-core-v3-substitutionformatstring-omit-empty-values).
+	// +optional
+	OmitEmpty *bool `json:"logOmitEmpty,omitempty"`
 }
 
 type ProxyAccessLogSinkType string

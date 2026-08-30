@@ -3084,6 +3084,7 @@ type AccessLog struct {
 	JSON          []*JSONAccessLog          `json:"json,omitempty" yaml:"json,omitempty"`
 	ALS           []*ALSAccessLog           `json:"als,omitempty" yaml:"als,omitempty"`
 	OpenTelemetry []*OpenTelemetryAccessLog `json:"openTelemetry,omitempty" yaml:"openTelemetry,omitempty"`
+	OmitEmpty     bool                      `json:"logOmitEmpty,omitempty" yaml:"logOmitEmpty,omitempty"`
 }
 
 // TextAccessLog holds the configuration for text access logging.
